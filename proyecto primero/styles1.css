@@ -1,0 +1,457 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header, footer {
+    background-color: #1d1d1d;
+    color: beige;
+    text-align: center;
+    padding: 1em;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+/*barra de navegacion*/
+.menu {
+    background-color: #1d1d1d;
+    display: flex;
+    justify-content: flex-start;
+}
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+nav ul {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display:flex;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;   
+}
+a{
+    display:flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    color:beige;
+    text-decoration: none;
+} 
+/*logo*/
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#imagen_logo{
+    max-width: 75px;
+    max-height: 75px;
+}
+/* Responsive styles */
+@media (min-width: 600px) {
+    header {
+        height: 100px;
+    }
+    nav ul {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    header, footer {
+        grid-column: span 2;
+    }
+
+    main {
+        flex-direction: row;
+        grid-column: 2;
+    }
+
+    section {
+        flex: 1;
+        margin: 0 1em;
+    }
+}
+/* main -- GLC*/
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+#mercedes_GLC_2023 {
+    background-image: url(./assets/fotos/2024-AMG-GLC-SUV-LTG-02-DR.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh; 
+    display: flex;
+}
+@font-face {
+    font-family: "Mercedes";
+    src: url(./assets/fuentes/Montserrat-Light.ttf);
+}
+#glc_coupe{
+    text-align: left;
+    background-color: rgba(223, 206, 206, 0.884);
+    padding: 0 20px;
+    border-radius: 10px;
+    font-size: 45px;
+    font-family: "Mercedes";    
+}
+@font-face {
+    font-family: "Mercedes2";
+    src: url(./assets/fuentes/Montserrat-Italic.ttf);
+}
+#poder{
+    font-size: 30px;
+    font-family: "Mercedes2";
+    margin-left:30px;
+    padding: 0 20px;
+    color: rgb(255, 255, 255);
+}
+/* amg - maybach*/
+.amg {
+    height: 70px;
+    width: 500px;
+    padding-bottom:500px;
+    position: fixed;
+    top: 600px;    
+    left: 40%;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    #glc_coupe {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+    #poder {
+        font-size: 20px;
+        margin-left: 10px;
+        padding: 0 10px;
+    }
+    .amg {
+        width: 100%;
+        left: 0;
+        top: auto;
+        bottom: 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    #glc_coupe {
+        font-size: 35px;
+        padding: 0 15px;
+    }
+    #poder {
+        font-size: 25px;
+        margin-left: 20px;
+        padding: 0 15px;
+    }
+    .amg {
+        width: 80%;
+        left: 10%;
+        top: 500px;
+    }
+}
+/*modelos hibridos-electricos*/
+h2{
+    text-align: center;
+    background-color: rgba(128, 116, 116, 0.884);
+    font-size: 40px;
+    font-family: "Mercedes";
+    margin-top: 50px;
+}
+/*hibridos*/
+.hibridos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.gle_hibrido{
+    margin: 100 50 50 50px;
+    max-width: 400px; 
+    max-height: 278px;   
+}
+.clase_A_hibrido{
+    margin: 80 50 50 50px;
+    max-width: 400px;
+    max-height: 278px;
+}
+
+.hibridos .descripcion{
+    margin: 10px;
+    padding: 10px;
+    color:grey;
+}
+@media (max-width: 600px) {
+    .hibridos {
+        flex-direction: column;
+    }   }
+    @media (min-width: 600px) and (max-width: 900px) {
+    .hibridos {
+        flex-direction: column;
+    }   }  
+/*electricos*/ 
+.electricos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.EQB_electrico{
+    margin: 100 50 50 50px;
+    max-width: 400px; 
+    max-height: 278px;   
+}
+.EQS{
+    margin: 80 50 50 50px;
+    max-width: 400px;
+    max-height: 278px;
+}
+@media (max-width: 600px) {
+    .electricos {
+        flex-direction: column;
+    }   }
+    @media (min-width: 600px) and (max-width: 900px) {
+    .electricos {
+        flex-direction: column;
+    }   }  
+/*barra de scroll*/
+.slider-container {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    overflow-x: scroll;
+  }  
+.slider-container img {
+    flex: 0 0 35%;
+    width: 40%;
+    object-fit:fill;   
+
+  }
+.slider-container {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    overflow-x: scroll;    
+    scroll-snap-type: x mandatory;
+  }  
+.slider-container img {
+    flex: 0 0 30%;
+    width: 100%;
+    object-fit: fill;
+    gap: 15px;    
+    scroll-snap-align: center;
+  }
+.slider-container p{
+    font-size: 20px;
+    font-family: "Mercedes";
+    margin-left: 15px;
+    padding: 0 20px;
+    line-height: normal;
+    align-items: center;
+    justify-content: center;
+}  
+/*localizacion*/
+.localizacion {
+    display: grid;
+    grid-template-columns: 50px 450px 100px 800px 1fr;
+    grid-template-rows: 100px 250px 100px; 
+    grid-template-areas: "imagen titulo descripcion";
+}
+.localizacion img {
+    grid-area: imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: 2;
+    grid-row: 2;
+}
+.localizacion p {
+    grid-area: descripcion;
+    grid-column: 4;
+    grid-row: 2;
+    font-size: 20px;
+    font-family: "Mercedes";
+    margin-left: 15px;
+    padding: 0 20px;
+    line-height: normal;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .localizacion {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "imagen"
+            "titulo"
+            "descripcion";
+    }
+    .localizacion img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .localizacion p {
+        grid-column: 1;
+        grid-row: 3;
+        font-size: 16px;
+        margin-left: 0;
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .localizacion {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "imagen titulo"
+            "imagen descripcion";
+    }
+    .localizacion img {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+    .localizacion p {
+        grid-column: 2;
+        grid-row: 2;
+        font-size: 18px;
+        margin-left: 10px;
+        padding: 0 15px;
+    }
+}
+
+footer{
+    background-color: #1d1d1d;
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 160px 220px 50px 220px 50px 220px 50px 220px 50px 220px 50px 220px 1fr;
+    grid-template-rows: 400px 200px;
+    
+}
+footer div nav ul{
+    display:grid;
+}
+footer .vendidos{
+    grid-area: 1 / 2 / 1 / 4;
+    color: beige;
+    font-size: 15px;
+    font-family: "Mercedes";
+    grid-column: 2;
+    grid-gap: 20px;
+    grid-auto-rows: 25px;
+    justify-items: center;
+    line-height: 40px;
+
+}   
+footer .compra{
+    color:beige;
+    font-size: 15px;
+    font-family: "Mercedes";
+    grid-column: 4;
+    grid-gap: 10px;
+    grid-auto-rows: 25px;
+    justify-items: center;
+    line-height: 40px;
+}
+footer .guia{
+    color:beige;
+    font-size: 15px;
+    font-family: "Mercedes";
+    grid-column: 6;
+    grid-gap: 10px;
+    grid-auto-rows: 25px;
+    justify-items: center;
+    line-height: 40px;
+}
+footer .propietarios{
+    color:beige;
+    font-size: 15px;
+    font-family: "Mercedes";
+    grid-column: 8;
+    grid-gap: 10px;
+    grid-auto-rows: 25px;
+    justify-items: center;
+    line-height: 40px;
+}
+footer .tecnología{
+    color:beige;
+    font-size: 15px;
+    font-family: "Mercedes";
+    grid-column: 10;
+    grid-gap: 10px;
+    grid-auto-rows: 25px;
+    justify-items: center;
+    line-height: 40px;
+}
+footer .descubre{
+    color:beige;
+    font-size: 15px;
+    font-family: "Mercedes";
+    grid-column: 12;
+    grid-gap: 10px;
+    grid-auto-rows: 25px;
+    justify-items: center;
+    line-height: 40px;
+}
+footer .termino{
+    grid-area: 2 / 2 / 2 / 14;
+    grid-row: 2;
+    color: beige;
+    width: 100%;
+}
+@media (max-width: 600px) {
+    footer {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    footer .vendidos, footer .compra, footer .guia, footer .propietarios, footer .tecnología, footer .descubre {
+        grid-column: span 2; 
+    }
+    footer .termino {
+        grid-column: span 6;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px) {}
+footer {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+footer .vendidos, footer .compra, footer .guia, footer .propietarios, footer .tecnología, footer .descubre {
+    grid-column: span 2; 
+}
+footer .termino {
+    grid-column: span 6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
